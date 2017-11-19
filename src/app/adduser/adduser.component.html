@@ -1,0 +1,9 @@
+<p>
+  adduser works!
+</p>
+<form #createForm="ngForm" (ngSubmit)="createUser(createForm.value)">
+  <input type="text" name="name"  ngModel >
+  <input type="text" name="password"  ngModel>
+  <input type="submit">
+</form>
+<div *ngIf="errorMessage" [ngClass] = "'error'"> {{errorMessage}} </div> 
